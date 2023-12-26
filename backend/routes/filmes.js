@@ -2,9 +2,16 @@ const express = require('express');
 const router = express.Router();
 const Filme = require('../models/filmes');
 
+const upload = require("../controllers/upload")
+
+
 // POST: Criar um novo filme
-router.post('/', async (req, res) => {
+router.post('/', upload.single('image'), async (req, res) => {
+  const fileName = req.file.filename
+
   const filme = new Filme(req.body);
+
+  filme.imagem = fileName
   try {
     const novoFilme = await filme.save();
     res.status(201).json(novoFilme);
