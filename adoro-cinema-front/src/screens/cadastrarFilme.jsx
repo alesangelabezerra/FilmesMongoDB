@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
-import { listar } from "../services/listar";
 
 export function CadastrarFilmes() {
     return(

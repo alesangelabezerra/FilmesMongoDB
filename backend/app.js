@@ -1,12 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors')
 
 const app = express();
 
 mongoose.connect('mongodb://localhost:27017/catalogoFilmes', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(bodyParser.json());
+app.use(cors())
 
 const filmesRoutes = require('./routes/filmes');
 app.use(express.json());
