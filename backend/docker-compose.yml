@@ -6,5 +6,5 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - /home/aluno/mondo-data:/data/
+      - /home/aluno/mongo_data:/data/
     
