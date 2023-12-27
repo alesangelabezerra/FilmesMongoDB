@@ -1,8 +1,26 @@
+:root {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-
+    background-color: #374047;
+    padding-bottom: 2rem;
 }
+
+/* .backgroung {
+    background-color: #374047;
+    margin-top: -1rem;
+    padding-top: 1rem;
+    height: 100vh;
+    padding-bottom: 20rem;
+} */
+
+
+/* header */
+
 header {
     background: #2474A6;
     color: #fff;
@@ -32,10 +50,10 @@ h1, h2, a {
     margin-bottom: 1px;
 }
 
-form {
-display: flex;
-align-items: center;
-margin-right: 3rem;
+header form {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
 }
 
 ul {
@@ -65,3 +83,56 @@ list-style-type: none;
     font-size: 1rem;
   }
 
+
+  /* pagina inicial */
+
+  .movie-card {
+    margin-left: 2rem;
+    background-color: #FAFAF8;
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 40%;
+    /* text-align: center; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .movie-card h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .movie-card span {
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+    color: #777;
+  }
+
+  .movie-card img {
+    max-width: 98%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+  #btn-atualiza-delete {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  #btn-atualiza-delete button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 2px;
+    border-radius: 5px;
+  }
+  
+ button:hover {
+    background-color: #007bff80;
+    color: #fff;
+  }

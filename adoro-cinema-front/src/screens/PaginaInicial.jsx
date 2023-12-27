@@ -26,22 +26,34 @@ export function PaginaInicial() {
     return(
         <div>
             <Header />
-           <div>
-                {filmes.map((elem, index) => (
-                    <div key={index}>
-                        <h2>{elem.nome}</h2>
-                        <span>{elem.genero}</span>
-                        <div id="btn-atuailiza-delete">
-                            <button type="button">atualizar</button>
-                            <button
-                             type="button"
-                             onClick={() => deletFilme(elem._id)}
-                             >deletar</button>
-                        </div>
-                        <img src={"http://localhost:3000/files/" + elem.imagem} alt="" />
-                        <p>{elem.sinopse}</p>
-                    </div>
-                ))} 
+           <div className="backgroung">
+           {filmes.map((elem, index) => (
+            <div key={index} className="movie-card">
+
+                <h2>{elem.nome}</h2>
+
+                <span><strong>Genero: </strong>{elem.genero}</span>
+
+                <span>
+                    <strong>Atores: </strong>{
+                        elem.atoresPrincipais.map((e, i) => <span>{e}</span>)}
+                </span>
+
+                <div id="btn-atualiza-delete" className="button-container">
+
+                <button type="button" onClick={() => atualizarFilme(elem._id)}>
+                    Atualizar
+                </button>
+
+                <button type="button" onClick={() => deletarFilme(elem._id)}>
+                    Deletar
+                </button>
+                </div>
+
+                <img src={"http://localhost:3000/files/" + elem.imagem} alt="" />
+                <p>  <strong>Sinopse: </strong> <br/> {elem.sinopse}</p>
+            </div>
+            ))}
             </div>
         </div>
     )
