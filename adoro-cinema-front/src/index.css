@@ -8,6 +8,11 @@
     opacity: 90%;
 } */
 
+header {
+    width: 100%;
+    background-color: #5553539f;
+}
+
 .main {
     background-color: #646cff;
     border-radius: 10px;

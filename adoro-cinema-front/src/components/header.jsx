@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export function Header() {
   return (
-    <header style={{backgroundColor: "#eee"}}>
+    <header>
       <nav>
         <ul>
           <li><Link to="/">Início</Link></li>

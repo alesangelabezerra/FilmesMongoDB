@@ -7,6 +7,10 @@ const app = express();
 
 mongoose.connect('mongodb://localhost:27017/catalogoFilmes', { useNewUrlParser: true, useUnifiedTopology: true });
 
+// acessar as imagens pela api
+const path = require("path")
+app.use('/files', express.static(path.resolve(__dirname, "./uploads")))
+
 app.use(bodyParser.json());
 app.use(cors())
 
