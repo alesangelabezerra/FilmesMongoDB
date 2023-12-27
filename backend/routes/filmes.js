@@ -5,7 +5,7 @@ const Filme = require('../models/filmes');
 const upload = require("../controllers/upload")
 
 
-// POST: Criar um novo filme
+// Criar um novo filme
 router.post('/', upload.single('image'), async (req, res) => {
   const fileName = req.file.filename
 
@@ -20,7 +20,21 @@ router.post('/', upload.single('image'), async (req, res) => {
   }
 });
 
-// GET: Listar todos os filmes
+// procurar por um nome de filme
+router.post('/buscar', async (req, res) => {
+
+  const name = req.body.name
+  const filtro = new RegExp(`^${name}`, "i")
+
+  try {
+    const novoFilme = await Filme.find({nome: filtro});
+    res.status(201).json(novoFilme);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Listar todos os filmes
 router.get('/', async (req, res) => {
   try {
     const filmes = await Filme.find();
@@ -30,7 +44,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// PUT: Atualizar um filme pelo ID
+// Atualizar um filme pelo ID
 router.put('/:id', async (req, res) => {
     try {
         const filme = await Filme.findById(req.params.id);
@@ -46,7 +60,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// DELETE: Deletar um filme pelo ID
+// Deletar um filme pelo ID
 router.delete('/:id', async (req, res) => {
     try {
         const resultado = await Filme.findOneAndDelete({ _id: req.params.id });
@@ -61,7 +75,7 @@ router.delete('/:id', async (req, res) => {
 
 
 
-// GET: Filtrar filmes por gênero
+// Filtrar filmes por gênero
 router.get('/genero/:genero', async (req, res) => {
     try {
         const filmes = await Filme.find({ genero: req.params.genero });

@@ -7,3 +7,14 @@ export async function buscarPorGenero(genero) {
         throw new Error(`Erro na requisição: ${error}`);
     }
 }
+
+
+export async function buscarPorNome(nome) {
+    try {
+        return await api.post(`/filmes/buscar/`, {
+            name: nome
+        })
+    } catch (error) {
+        throw new Error(`Erro na requisição: ${error}`);
+    }
+}

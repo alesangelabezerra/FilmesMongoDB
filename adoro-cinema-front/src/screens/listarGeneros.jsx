@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 import { Header } from "../components/header";
 import { listar } from "../services/listar";
-import { buscarPorGenero } from "../services/buscarPorGenero";
+import { buscarPorGenero } from "../services/buscar";
 
 export function ListarGenero() {
 
