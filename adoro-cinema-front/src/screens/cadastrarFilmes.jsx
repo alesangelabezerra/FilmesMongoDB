@@ -85,6 +85,7 @@ export function CadastrarFilmes() {
     return(
         <div>
             <Header />
+        <div id="cadastrar-container">
 
             {
             exibAlerta && <Alerta
@@ -98,7 +99,6 @@ export function CadastrarFilmes() {
 
             <h2>Cadastrar Filmes</h2>
             <form>
-                <h3>Cadastrar filme</h3>
                 <label htmlFor="name">Foto: </label>
                 <input
                     type="file" 
@@ -136,17 +136,20 @@ export function CadastrarFilmes() {
                     setGenero(e.target.value)
                 }} />
                 <label htmlFor="name">Atores principais: </label>
-                <input
-                    type="text" 
-                    name="atores" 
-                    id="atores" 
-                    value={ator} 
-                    onChange={(e) => {
-                    setAtor(e.target.value)
-                }} />
 
-                <button onClick={addItem} type="button"> Adcionar ator</button>
+                <div id="add-ator">
+                    <input
+                        type="text" 
+                        name="atores" 
+                        id="atores" 
+                        value={ator} 
+                        onChange={(e) => {
+                        setAtor(e.target.value)
+                    }} />
 
+                    <button id="adicionar-ator" onClick={addItem} type="button"></button>
+                </div>
+               
                 <label htmlFor="name">Sinopse: </label>
                 <input
                     type="text" 
@@ -156,9 +159,11 @@ export function CadastrarFilmes() {
                     onChange={(e) => {
                     setSinopse(e.target.value)
                 }} />
+
+                <button onClick={cadastrarPostagemFilme} type="button">Postar publicacao</button>
           </form>
 
-          <button onClick={cadastrarPostagemFilme} type="button">Postar publicacao</button>
+          </div>
 
         </div>
     )

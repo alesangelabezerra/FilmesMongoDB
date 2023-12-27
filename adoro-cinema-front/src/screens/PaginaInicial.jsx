@@ -45,7 +45,7 @@ export function PaginaInicial() {
                     Atualizar
                 </button>
 
-                <button type="button" onClick={() => deletarFilme(elem._id)}>
+                <button type="button" onClick={() => deletFilme(elem._id)}>
                     Deletar
                 </button>
                 </div>

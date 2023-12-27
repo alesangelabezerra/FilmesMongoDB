@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 
 export function Alerta({ mensagem, closeAlert, borderColor, backgroundColor }){
   return (
-    <div style={{ border: `2px solid ${borderColor}`, padding: '10px', margin: '10px', backgroundColor: backgroundColor }}>
+    <div id="alerta" style={{ 
+      border: `0px solid ${borderColor}`,
+       backgroundColor: backgroundColor,
+      }}>
       <p>{mensagem}</p>
-      <button onClick={closeAlert}>Fechar</button>
+      <button id='cose-alert' onClick={closeAlert}></button>
     </div>
   );
 };

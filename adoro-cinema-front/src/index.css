@@ -71,7 +71,7 @@ list-style-type: none;
     padding: 0.7rem;
 }
 
-  button {
+button {
     padding: 5px;
     background: #007BFF;
     color: #fff;
@@ -136,3 +136,101 @@ list-style-type: none;
     background-color: #007bff80;
     color: #fff;
   }
+
+  /* alerta */
+
+#alerta {
+  display: flex;
+  width: 80%;
+  margin: 2rem auto;
+  border-radius: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.778);
+  opacity: 0.7;
+}
+
+
+#alerta p {
+  margin-left: 5rem;
+  color: #FAFAF8;
+  font-weight: 500;
+}
+
+#cose-alert {
+  background-color: transparent;
+  background-image: url('../public/close.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  width: 25px; 
+  height: 25px; 
+  border: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+/* pagina de cadastrar */
+
+
+#cadastrar-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  background-color: #FAFAF8;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#cadastrar-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+#cadastrar-container form input,
+#cadastrar-container form label {
+  width: 80%;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#cadastrar-container h2 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#cadastrar-container form button {
+  width: 30%;
+  height: 2.2rem;
+  font-size: 1rem;
+}
+
+
+#add-ator {
+  display: flex;
+  width: 80%;
+  height: 3rem;
+}
+
+#add-ator input {
+  flex-grow: 1; /* Ocupa o espaço restante disponível */
+  margin-right: 10px; 
+  height: 2rem;
+  margin-left: -0.3rem;
+}
+
+#adicionar-ator {
+  background-color: transparent;
+  background-image: url('../public/mais.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  width: 2.2rem !important;  /* Ajuste o tamanho conforme necessário */
+  height: 2.2rem !important; /* Ajuste o tamanho conforme necessário */
+  border: none;
+  cursor: pointer;
+}
