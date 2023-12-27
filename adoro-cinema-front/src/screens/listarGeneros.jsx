@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 import { Header } from "../components/header";
-import { listar } from "../services/listar";
+import { listarGeneros } from "../services/listar";
 import { buscarPorGenero } from "../services/buscar";
 
 export function ListarGenero() {
@@ -13,13 +13,13 @@ export function ListarGenero() {
   
 
     async function listarFilmes() {
-        const res = await listar()
+        const res = await listarGeneros()
+        console.log(res);
         setGeneros(res.data)
     }
 
     async function BuscarFilmes(genero) {
         const res = await buscarPorGenero(genero)
-       console.log(res);
        setFilmes(res.data)
        setExib(!exibirFilmes)
     }
@@ -56,11 +56,11 @@ export function ListarGenero() {
                 <div key={index}>
                     <button
                     onClick={() => {
-                        BuscarFilmes(elem.genero);
+                        BuscarFilmes(elem);
                     }}
                     type="button"
                     >
-                    {elem.genero}
+                    {elem}
                     </button>
                 </div>
                 ))

@@ -7,3 +7,13 @@ export async function listar() {
         throw new Error(`Erro na requisição: ${error}`);
     }
 }
+
+export async function listarGeneros() {
+    try {
+        return await api.get('/filmes/get-generos')
+    } catch (error) {
+        throw new Error(`Erro na requisição: ${error}`);
+    }
+}
+
+

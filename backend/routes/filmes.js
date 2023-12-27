@@ -88,4 +88,17 @@ router.get('/genero/:genero', async (req, res) => {
     }
 });
 
+
+// mostrar os generos disponiveis
+
+router.get('/get-generos', async (req, res) => {
+  try {
+      const generos = await Filme.distinct('genero');
+      res.status(200).json(generos);
+  } catch (err) {
+      res.status(500).json({ message: err.message });
+  }
+});
+
+
 module.exports = router;
