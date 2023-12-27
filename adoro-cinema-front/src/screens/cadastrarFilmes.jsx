@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 import { Alerta } from "../components/alert";
+import { Header } from "../components/header";
 
 import { cadastrarFilme } from "../services/cadastrarFilme";
 
-export function PaginaInicial() {
+export function CadastrarFilmes() {
     const [foto, setFoto] = useState(null)
     const [nome, setNome] = useState("")
     const [ano, setAno] = useState(0)
@@ -83,6 +84,7 @@ export function PaginaInicial() {
 
     return(
         <div>
+            <Header />
 
             {
             exibAlerta && <Alerta

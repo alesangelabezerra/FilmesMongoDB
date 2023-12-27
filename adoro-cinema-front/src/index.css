@@ -65,14 +65,14 @@ input {
     width: 30rem;
 }
 
-button, a {
+/* button, a {
     font-size: 1rem;
     font-weight: 500;
     background-color: #1a1a1a;
     color: #fff;
     width: 30rem;
     height: 2.2rem;
-}
+} */
 
 button:hover {
    background-color: #1a1a1aea;

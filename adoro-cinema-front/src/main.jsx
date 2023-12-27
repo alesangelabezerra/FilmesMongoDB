@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 
 import { Registros } from './screens/registros.jsx';
-import {PaginaInicial} from './screens/paginaInicial.jsx'
-import {CadastrarFilmes} from './screens/cadastrarFilme.jsx'
+import { PaginaInicial } from './screens/PaginaInicial.jsx';
+import {CadastrarFilmes} from './screens/cadastrarFilmes.jsx'
 
 
 const router = createBrowserRouter([
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/PaginaInicial",
-    element: <PaginaInicial />
+    path: "/cadastrarFilmes",
+    element: <CadastrarFilmes />
   }
 ]);
 
