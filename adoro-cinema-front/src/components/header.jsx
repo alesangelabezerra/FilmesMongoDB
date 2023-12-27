@@ -14,29 +14,34 @@ export function Header() {
 
   return (
     <header>
+
+      <h1>AssisteFlix</h1>
       <nav>
         <ul>
-          <li><Link to="/">Início</Link></li>
-          <li><Link to="/cadastrarFilmes">Cadastrar Filme</Link></li>
-          <li><Link to="/listarGeneros">Generos</Link></li>
-          <li>
-            <form onSubmit={handleSubmit}>
+          <li><Link className='links' to="/">Início</Link></li>
+          <li><Link className='links' to="/cadastrarFilmes">Cadastrar Filme</Link></li>
+          <li><Link className='links' to="/listarGeneros">Generos</Link></li>
+        </ul>
+      </nav>
+
+      <form onSubmit={handleSubmit}>
             <input
+                id='input-search'
                 type="text"
                 name="search"
                 placeholder="Pesquisar"
                 value={nomeFime}
                 onChange={(e) => setNomeFilme(e.target.value)}
               />
-              <button type="button"
-              onClick={handleSubmit}
+              <button
+                id='btn-search'
+                type="button"
+                onClick={handleSubmit}
               >
                 <span role="img" aria-label="search-icon">🔍</span>
               </button>
-            </form>
-          </li>
-        </ul>
-      </nav>
+          </form>
+
     </header>
   );
 }
