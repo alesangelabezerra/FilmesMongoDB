@@ -8,7 +8,8 @@ export function Header() {
         <ul>
           <li><Link to="/">Início</Link></li>
           <li><Link to="/cadastrarFilmes">Cadastrar Filme</Link></li>
-          <li><Link to="/procurar">Procurar</Link></li>
+          <li><Link to="/pesquisar">Procurar</Link></li>
+          <li><Link to="/listarGeneros">Generos</Link></li>
         </ul>
       </nav>
     </header>

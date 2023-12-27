@@ -9,6 +9,7 @@ import {
 import { Registros } from './screens/registros.jsx';
 import { PaginaInicial } from './screens/PaginaInicial.jsx';
 import {CadastrarFilmes} from './screens/cadastrarFilmes.jsx'
+import { ListarGenero } from './screens/listarGeneros.jsx';
 
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/cadastrarFilmes",
     element: <CadastrarFilmes />
+  },
+  {
+    path: "/listarGeneros",
+    element: <ListarGenero />
   }
 ]);
 
