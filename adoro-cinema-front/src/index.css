@@ -6,10 +6,9 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #374047;
+    background-color: #272929;
     padding-bottom: 2rem;
 }
-
 /* .backgroung {
     background-color: #374047;
     margin-top: -1rem;
@@ -17,20 +16,39 @@ body {
     height: 100vh;
     padding-bottom: 20rem;
 } */
-
-
-/* header */
-
 header {
-    background: #2474A6;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;  
-    margin: 0;   
-    border-bottom: 3px solid #374047; 
+  background: #000000;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;  
+  margin: 0;   
+  border-bottom: 3px solid #374047; 
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white; /* Exemplo de cor */
+}
+
+ul li a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 h1 {
@@ -40,7 +58,73 @@ h1 {
 h1, h2, a {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
+    color: white;
+    background-color: #000;
+    padding: 10px 50px;
 }
+#input-search {
+  padding: 5px;
+  margin-right: 5px;
+  height: 1.5rem;
+}
+
+#btn-search {
+  padding: 0.7rem;
+}
+
+/* header */
+
+/* header {
+    background: #2474A6;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;  
+    margin: 0;   
+    border-bottom: 3px solid #374047; 
+} */
+/* 
+h1 {
+    font-size: 3.5rem;
+}
+
+h1, h2, a {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+} */
+.generos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espaçamento entre os botões */
+  justify-content: center;
+  margin-bottom: 20px; /* Espaço antes dos cards de filmes */
+}
+
+.genero-item button {
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    padding: 10px 0;
+    background-color: #2474A6;/* Estilize os botões de gênero conforme necessário */
+}
+
+.filmes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre os cards de filme */
+}
+
+.filme-card {
+  /* Estilize seus cards de filme aqui */
+  width: 300px; /* Exemplo de largura */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #FAFAF8;
+}
+
 
 
 .links {
@@ -56,9 +140,9 @@ header form {
     margin-right: 3rem;
 }
 
-ul {
+/* ul {
 list-style-type: none;
-}
+} */
 
 
 #input-search {
@@ -72,12 +156,13 @@ list-style-type: none;
 }
 
 button {
-    padding: 5px;
-    background: #007BFF;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
+  padding: 5px;
+  background: #070f58;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius:4px;
+}
   
   icon {
     font-size: 1rem;
@@ -87,12 +172,13 @@ button {
   /* pagina inicial */
 
   .movie-card {
+    margin: 10px;
     margin-left: 2rem;
     background-color: #FAFAF8;
     margin-top: 1rem;
     border: 1px solid #ddd;
     padding: 15px;
-    width: 40%;
+    width: 300px;
     /* text-align: center; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -117,6 +203,14 @@ button {
     margin-top: 10px;
     border-radius: 10px;
   }
+
+  #movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
   
   #btn-atualiza-delete {
     display: flex;

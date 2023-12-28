@@ -26,7 +26,7 @@ export function PaginaInicial() {
     return(
         <div>
             <Header />
-           <div className="backgroung">
+           <div className="backgroung" id="movies-container">
            {filmes.map((elem, index) => (
             <div key={index} className="movie-card">
 

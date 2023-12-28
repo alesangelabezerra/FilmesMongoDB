@@ -28,46 +28,45 @@ export function ListarGenero() {
        listarFilmes()
       }, []);
 
-    return(
+      return (
         <div>
             <Header />
-           <h1>Pagina inicial</h1>
-           
-           {
-            exibirFilmes ? (
-                <>
-                <button 
-                    onClick={() => setExib(!exibirFilmes)} 
-                    type="button"
-                >
-                    Voltar
-                </button>
-                {filmesGeneros.map((elem, index) => (
-                    <div key={index}>
-                    <h2>{elem.nome}</h2>
-                    <span>{elem.genero}</span>
-                    <img src={"http://localhost:3000/files/" + elem.imagem} alt="" />
-                    <p>{elem.sinopse}</p>
+            
+            <h1>Gêneros</h1>
+            <button 
+                onClick={() => setExib(!exibirFilmes)} 
+                type="button"
+            >Voltar</button>
+            <div className="generos-container">
+                {generos.map((elem, index) => (
+                    <div key={index} className="genero-item">
+                        <button
+                            onClick={() => {
+                                BuscarFilmes(elem);
+                            }}
+                            type="button"
+                        >
+                            {elem}
+                        </button>
                     </div>
                 ))}
-                </>
-            ) : (
-                generos.map((elem, index) => (
-                <div key={index}>
-                    <button
-                    onClick={() => {
-                        BuscarFilmes(elem);
-                    }}
-                    type="button"
-                    >
-                    {elem}
-                    </button>
+            </div>
+
+            {exibirFilmes && (
+                <div className="filmes-container">
+                    
+                    {filmesGeneros.map((elem, index) => (
+                        <div key={index} className="filme-card">
+                            <h2>{elem.nome}</h2>
+                            <span>{elem.genero}</span>
+                            <img src={"http://localhost:3000/files/" + elem.imagem} alt={elem.nome} />
+                            <p>{elem.sinopse}</p> 
+                        </div>
+                    ))}
                 </div>
-                ))
-            )
-            }
+            )}
         </div>
-    )
+    );
 }
 
   //foto, nome, ano, genero , atoresprincipais, sinopse.

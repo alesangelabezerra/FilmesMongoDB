@@ -38,7 +38,7 @@ export function Header() {
                 type="button"
                 onClick={handleSubmit}
               >
-                <span role="img" aria-label="search-icon">🔍</span>
+                <span role="img" aria-label="search-icon" id="input-search">🔍</span>
               </button>
           </form>
 
